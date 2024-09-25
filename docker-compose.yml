@@ -19,7 +19,7 @@ networks:
     driver: macvlan
     name: dirty
     driver_opts:
-      parent: vlan88
+      parent: eth0
     ipam:
       driver: default
       config:
