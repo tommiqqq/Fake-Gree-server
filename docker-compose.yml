@@ -20,7 +20,7 @@ networks:
   dirty:
     driver: macvlan
     driver_opts:
-      parent: enpls0
+      parent: en0
     ipam:
       driver: default
       config:
