@@ -16,10 +16,10 @@ services:
 
 networks:
   dirty:
-    driver: macvlan
+    driver: ipvlan
     name: dirty
     driver_opts:
-      parent: enpls0.10
+      parent: vlan88
     ipam:
       driver: default
       config:
