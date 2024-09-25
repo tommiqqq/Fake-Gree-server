@@ -16,7 +16,7 @@ services:
 
 networks:
   dirty:
-    driver: ipvlan
+    driver: macvlan
     name: dirty
     driver_opts:
       parent: vlan88
