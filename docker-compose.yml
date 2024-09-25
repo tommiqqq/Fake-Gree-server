@@ -1,18 +1,18 @@
 version: '3.2'
 services:
-    fakegree:
+  fakegree:
     image: fakegree
     build: fakegree
     restart: always
     volumes:
       - ./fakegree:/fakegree
     environment:
-      IP: 192.168.0.69  # change this to a free IP in the HVAC's subnet
+      IP: 192.168.50.69  # change this to a free IP in the HVAC's subnet
       PORT: 1812 # leave this
       HOSTNAME: dis.gree.com # leave this
     networks:
       dirty:
-        ipv4_address: 192.168.0.69 # must match the IP above
+        ipv4_address: 192.168.50.69 # must match the IP above
 
 networks:
   dirty:
@@ -23,6 +23,6 @@ networks:
     ipam:
       driver: default
       config:
-        - subnet: 192.168.0.0/24  # change this to the HVAC's subnet
-          gateway: 192.168.0.11   # change this to the HVAC's subnet's gateway
+        - subnet: 192.168.50.0/24  # change this to the HVAC's subnet
+          gateway: 192.168.50.1   # change this to the HVAC's subnet's gateway
 
